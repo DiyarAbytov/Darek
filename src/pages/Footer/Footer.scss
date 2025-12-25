@@ -1,0 +1,133 @@
+:root {
+  --c-bg: #ffffff;
+  --c-text: #1f2937;
+  --c-accent: #3b82f6;
+}
+
+.footer {
+  padding: 80px 24px;
+  background: var(--c-bg);
+  font-family: "Inter", sans-serif;
+  position: relative;
+  z-index: 10;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--c-text);
+    margin-bottom: 32px;
+    text-align: left;
+  }
+
+  &__content {
+    display: flex;
+    gap: 48px;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  &__section {
+    flex: 1 1 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--c-text);
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    stroke: var(--c-accent);
+    stroke-width: 2;
+    fill: none;
+    flex-shrink: 0;
+  }
+
+  &__link,
+  &__text {
+    color: var(--c-text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  &__link:hover,
+  &__link:focus-visible {
+    color: var(--c-accent);
+    outline: none;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 64px 26px;
+
+    &__title {
+      font-size: 28px;
+      text-align: center;
+    }
+
+    &__content {
+      gap: 32px;
+      justify-content: center;
+    }
+
+    &__item {
+      font-size: 15px;
+    }
+
+    &__icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 48px 24px;
+
+    &__title {
+      font-size: 24px;
+    }
+
+    &__item {
+      font-size: 14px;
+      justify-content: center;
+    }
+
+    &__icon {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    &__item {
+      font-size: 13px;
+    }
+
+    &__icon {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
