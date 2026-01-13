@@ -51,7 +51,8 @@ const Login = ({ onLogin }) => {
         }
         show(intl.formatMessage({ id: "login_success", defaultMessage: "Успешный вход! Перенаправление..." }), "success", 1200);
         if (typeof onLogin === "function") onLogin();
-        window.setTimeout(() => navigate("/dashboard/profile"), 1000);
+window.setTimeout(() => navigate("/sidebar/profile", { replace: true }), 1000);
+
       } else {
         const msg =
           data?.detail ||
